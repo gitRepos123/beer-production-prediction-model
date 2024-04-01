@@ -12,7 +12,7 @@ def make_response(days: int = 1) -> None:
     df = pd.DataFrame({
         'Day': days_array,
         'Production': predictions
-    }).set_index(['Day'], level = 'Day')
+    })
     st.table(df)
     st.subheader('Beer Production Trend')
     fig = plt.figure()
