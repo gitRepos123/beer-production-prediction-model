@@ -14,6 +14,7 @@ def make_response(days: int = 1) -> None:
         'Production': predictions
     })
     st.table(df)
+    st.subheader('Beer Production Trend')
     fig = plt.figure()
     plt.xlabel('Day')
     plt.ylabel('Production')
