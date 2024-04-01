@@ -8,7 +8,7 @@ def make_response(days: int = 1) -> None:
     st.subheader('Predictions')
     days_array = [ day for day in range(days) ]
     model = joblib.load('beer-production-prediction-model.pk1')
-    predictions = model.get_forecast(steps = days)
+    predictions = model.forecast(steps = days)
     df = pd.DataFrame({
         'Day': days_array,
         'Production': predictions
