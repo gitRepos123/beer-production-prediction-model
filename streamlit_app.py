@@ -22,7 +22,7 @@ def make_response(days: int = 1) -> None:
     st.table(df)
 
 def init_app():
-    days = st.slider('Number of Days', min_value = 1, max_value = 500, step = 1)
+    days = st.slider('Number of Days', min_value = 1, max_value = 20, step = 1)
     make_response(days)
 
 init_app()
