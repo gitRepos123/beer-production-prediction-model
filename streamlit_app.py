@@ -22,7 +22,7 @@ def make_response(days: int = 1) -> None:
     st.pyplot(fig)
 
 def init_app():
-    days = st.slider('Number of Days', min_value = 1, max_value = 20, step = 1)
+    days = st.slider('Number of Days', min_value = 1, max_value = 135, step = 1)
     make_response(days)
 
 init_app()
