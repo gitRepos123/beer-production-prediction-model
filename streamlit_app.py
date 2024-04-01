@@ -13,7 +13,7 @@ def make_response(days: int = 1) -> None:
         'Day': days_array,
         'Production': predictions
     })
-    df.reset_index(inplace = True)
+    df.reset_index()
     st.table(df)
     st.subheader('Beer Production Trend')
     fig = plt.figure()
